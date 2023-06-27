@@ -1,0 +1,19 @@
+.ProductList__title {
+  padding: 0 30px;
+}
+
+.ProductList__list {
+  height: 250px;
+  display: flex;
+  justify-content: safe center;
+  align-items: center;
+  overflow-x: auto;
+  gap: 30px;
+  padding: 10px 30px;
+  list-style-type: none;
+  scrollbar-width: none;
+}
+
+.ProductList__list::-webkit-scrollbar {
+  display: none;
+}

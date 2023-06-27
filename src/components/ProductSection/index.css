@@ -1,5 +1,6 @@
 .ProductSection {
   width: 100%;
+  position: relative;
 }
 
 .ProductSection > * {
@@ -31,12 +32,22 @@
   gap: 20px;
   overflow-x: auto;
   list-style-type: none;
+  scrollbar-width: none;
+}
+
+.ProductSection__ingredients::-webkit-scrollbar {
+  display: none;
 }
 
 .ProductSection__ingredients li {
   color: white;
   background-color: black;
   width: fit-content;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 10px;
   box-shadow: inset 1px 1px 0 white;
   border: 1px solid black;
@@ -44,4 +55,23 @@
 
 .ProductSection__instructions {
   text-align: justify;
+}
+
+.ProductSection__close {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+
+.ProductSection__close:active {
+  transform: scale(2);
 }

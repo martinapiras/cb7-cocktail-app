@@ -16,6 +16,12 @@ const ProductSection = ({ productSection, setProductSection }) => {
 
   return (
     <div className="ProductSection">
+      <button
+        className="ProductSection__close"
+        onClick={() => setProductSection("")}
+      >
+        ❌
+      </button>
       <img src={productData.strDrinkThumb} alt={productData.strDrink} />
       <div className="ProductSection__text">
         <div className="ProductSection__text--heading">

@@ -1,0 +1,22 @@
+.ProductListItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ProductListItem img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.ProductListItem__name {
+  display: flex;
+  width: 250px;
+  height: 2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
