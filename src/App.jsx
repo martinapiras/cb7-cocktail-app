@@ -1,7 +1,18 @@
+import { useState } from "react";
 import "./App.css";
+import ProductSection from "./components/ProductSection";
 
 function App() {
-  return <div>Prova 2</div>;
+  const [productSection, setProductSection] = useState("");
+
+  return (
+    <>
+      <ProductSection
+        productSection={productSection}
+        setProductSection={setProductSection}
+      ></ProductSection>
+    </>
+  );
 }
 
 export default App;
