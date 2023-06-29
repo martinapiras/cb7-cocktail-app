@@ -3,9 +3,12 @@ import "./App.css";
 import ProductSection from "./components/ProductSection";
 import ProductList from "./components/ProductList";
 import Contacts from "./components/Contacts";
+import SearchBar from "./components/SearchBar";
+import SearchList from "./components/SearchList";
 
 function App() {
   const [productSection, setProductSection] = useState("");
+  const [searchValue, setSearchValue] = useState("");
 
   const onRender = () => {
     switch (productSection) {
@@ -15,6 +18,11 @@ function App() {
       case "":
         return (
           <>
+            <SearchBar
+              searchValue={searchValue}
+              setSearchValue={setSearchValue}
+              setProductSection={setProductSection}
+            />
             <ProductList
               name="rum"
               setProductSection={setProductSection}
@@ -28,6 +36,14 @@ function App() {
               setProductSection={setProductSection}
             ></ProductList>
           </>
+        );
+
+      case "searchList":
+        return (
+          <SearchList
+            searchValue={searchValue}
+            setProductSection={setProductSection}
+          />
         );
 
       default:
