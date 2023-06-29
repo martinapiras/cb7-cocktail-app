@@ -1,6 +1,7 @@
 .ProductSection {
   width: 100%;
   position: relative;
+  margin-top: 50px;
 }
 
 .ProductSection > * {
@@ -43,7 +44,7 @@
   color: white;
   background-color: black;
   width: fit-content;
-  height: 2rem;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
