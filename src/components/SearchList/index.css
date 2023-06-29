@@ -1,0 +1,20 @@
+.SearchList {
+  margin-top: 50px;
+}
+
+.SearchList__Title {
+  padding: 10px 30px;
+}
+
+.SearchList__Error {
+  color: red;
+  text-align: center;
+}
+
+.SearchList__list {
+  display: flex;
+  flex-direction: column;
+  align-items: safe center;
+  justify-content: center;
+  gap: 30px;
+}
