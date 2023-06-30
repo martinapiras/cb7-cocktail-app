@@ -1,0 +1,22 @@
+.Filters {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.Filters__checkbox {
+  display: flex;
+  width: 80%;
+
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.Filters input[type="submit"] {
+  padding: 2px 5px;
+}

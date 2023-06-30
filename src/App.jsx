@@ -5,10 +5,17 @@ import ProductList from "./components/ProductList";
 import Contacts from "./components/Contacts";
 import SearchBar from "./components/SearchBar";
 import SearchList from "./components/SearchList";
+import Filters from "./components/Filters";
 
 function App() {
   const [productSection, setProductSection] = useState("");
   const [searchValue, setSearchValue] = useState("");
+  const [categoryList, setCategoryList] = useState([
+    { name: "rum", id: 1, checked: true },
+    { name: "vodka", id: 2, checked: true },
+    { name: "gin", id: 3, checked: true },
+    { name: "whiskey", id: 4, checked: true },
+  ]);
 
   const onRender = () => {
     switch (productSection) {
@@ -18,23 +25,22 @@ function App() {
       case "":
         return (
           <>
+            <Filters
+              categoryList={categoryList}
+              setCategoryList={setCategoryList}
+            />
             <SearchBar
               searchValue={searchValue}
               setSearchValue={setSearchValue}
               setProductSection={setProductSection}
             />
-            <ProductList
-              name="rum"
-              setProductSection={setProductSection}
-            ></ProductList>
-            <ProductList
-              name="vodka"
-              setProductSection={setProductSection}
-            ></ProductList>
-            <ProductList
-              name="gin"
-              setProductSection={setProductSection}
-            ></ProductList>
+            {categoryList.map((category) => (
+              <ProductList
+                name={category.name}
+                setProductSection={setProductSection}
+                key={category.id}
+              />
+            ))}
           </>
         );
 
