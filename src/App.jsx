@@ -27,7 +27,6 @@ function App() {
         return (
           <>
             <Filters
-              categoryList={categoryList}
               setCategoryList={setCategoryList}
               filterList={filterList}
               setFilterList={setFilterList}
