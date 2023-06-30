@@ -16,6 +16,7 @@ function App() {
     { name: "gin", id: 3, checked: true },
     { name: "whiskey", id: 4, checked: true },
   ]);
+  const [filterList, setFilterList] = useState(categoryList);
 
   const onRender = () => {
     switch (productSection) {
@@ -28,6 +29,8 @@ function App() {
             <Filters
               categoryList={categoryList}
               setCategoryList={setCategoryList}
+              filterList={filterList}
+              setFilterList={setFilterList}
             />
             <SearchBar
               searchValue={searchValue}
