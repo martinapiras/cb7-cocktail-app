@@ -1,9 +1,12 @@
 import { useState } from "react";
 import "./index.css";
 
-const Filters = ({ categoryList, setCategoryList }) => {
-  const [filterList, setFilterList] = useState(categoryList);
-
+const Filters = ({
+  categoryList,
+  setCategoryList,
+  filterList,
+  setFilterList,
+}) => {
   const onHandleCheck = (id) => {
     setFilterList((prev) =>
       prev.map((category) => {
